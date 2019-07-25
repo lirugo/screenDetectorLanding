@@ -47,9 +47,6 @@ h1 {
   line-height: 1;
   transform: translateY(6rem);
   z-index: 1;
-}
-
-.start-anim {
   animation: up 500ms linear forwards;
 }
 

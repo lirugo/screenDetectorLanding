@@ -26,7 +26,11 @@
     </div>
     <div class="section s2">
         <div class="slide">
-            <h1>Demo</h1>
+            <div class="container">
+                <div class="title-container">
+                    <h1>Demo</h1>
+                </div>
+            </div>
         </div>
         <div class="slide">
             <h1>Demo Slide</h1>
@@ -34,7 +38,11 @@
     </div>
     <div class="section s3">
         <div class="slide">
-            <h1>SDK</h1>
+            <div class="container">
+                <div class="title-container">
+                    <h1>SDK</h1>
+                </div>
+            </div>
         </div>
         <div class="slide">
             <h1>SDK Slide</h1>
@@ -42,7 +50,11 @@
     </div>
     <div class="section s4">
         <div class="slide">
-            <h1>API</h1>
+            <div class="container">
+                <div class="title-container">
+                    <h1>API</h1>
+                </div>
+            </div>
         </div>
         <div class="slide">
             <h1>API Slide</h1>
@@ -55,9 +67,6 @@
     setTimeout(() => {
         document.body.classList.add("loaded");
     }, 1000);
-    setTimeout(() => {
-        document.querySelector("h1").classList.add("start-anim");
-    }, 1300);
 
     new fullpage('#fullpage', {
         autoScrolling: true,
