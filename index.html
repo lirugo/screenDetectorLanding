@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+<div id="fullpage">
+    <div class="section s1">
+        <div class="container">
+            <div class="title-container">
+                <h1>Screen Defect</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section s2">
+        <div class="slide">
+            <div class="container">
+                <div class="title-container">
+                    <h1>Demo</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <h1>Demo Slide</h1>
+        </div>
+    </div>
+    <div class="section s3">
+        <div class="slide">
+            <div class="container">
+                <div class="title-container">
+                    <h1>SDK</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <h1>SDK Slide</h1>
+        </div>
+    </div>
+    <div class="section s4">
+        <div class="slide">
+            <div class="container">
+                <div class="title-container">
+                    <h1>API</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <h1>API Slide</h1>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+        anchors: [
+            's1',
+            's2',
+            's3',
+            's4',
+        ],
+        navigationTooltips: [
+            'Welcome',
+            'Demo',
+            'SDK',
+            'API',
+        ],
+        showActiveTooltip: true,
+        scrollingSpeed: 1000,
+        controlArrows: false,
+        slidesNavigation: true,
+    });
+</script>
+</body>
+</html>
