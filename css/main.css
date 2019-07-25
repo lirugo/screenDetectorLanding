@@ -1,4 +1,4 @@
-@-webkit-keyframes Background {
+@-webkit-keyframes background {
   0% {
     background-position: 0% 50%;
   }
@@ -9,7 +9,7 @@
     background-position: 0% 50%;
   }
 }
-@-moz-keyframes Background {
+@-moz-keyframes background {
   0% {
     background-position: 0% 50%;
   }
@@ -20,7 +20,7 @@
     background-position: 0% 50%;
   }
 }
-@keyframes Background {
+@keyframes background {
   0% {
     background-position: 0% 50%;
   }
@@ -46,8 +46,11 @@ h1 {
   font-size: 4rem;
   line-height: 1;
   transform: translateY(6rem);
-  animation: up 500ms linear forwards;
   z-index: 1;
+}
+
+.start-anim {
+  animation: up 500ms linear forwards;
 }
 
 .title-container {
@@ -74,9 +77,9 @@ span {
 .s1 {
   background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
   background-size: 300% 300%;
-  -webkit-animation: Background 50s ease infinite;
-  -moz-animation: Background 50s ease infinite;
-  animation: Background 50s ease infinite;
+  -webkit-animation: background 50s ease infinite;
+  -moz-animation: background 50s ease infinite;
+  animation: background 50s ease infinite;
 }
 
 .fp-slidesNav.fp-bottom {

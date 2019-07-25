@@ -20,7 +20,7 @@
     <div class="section s1">
         <div class="container">
             <div class="title-container">
-                <h1>Screen Defect</h1>
+                <h1 id="main-title">Screen Defect</h1>
             </div>
         </div>
     </div>
@@ -63,11 +63,13 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
-
 <script>
     setTimeout(() => {
         document.body.classList.add("loaded");
     }, 1000);
+    setTimeout(() => {
+        document.getElementById("main-title").classList.add("start-anim");
+    }, 1300);
 
     new fullpage('#fullpage', {
         autoScrolling: true,
