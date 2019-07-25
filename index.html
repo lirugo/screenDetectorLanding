@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Screen Detect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/loader.css" />
 </head>
 <body>
+
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
 <div id="fullpage">
     <div class="section s1">
         <div class="container">
@@ -54,7 +63,12 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+
 <script>
+    setTimeout(() => {
+        document.body.classList.add("loaded");
+    }, 1000);
+
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
@@ -64,13 +78,6 @@
             's3',
             's4',
         ],
-        navigationTooltips: [
-            'Welcome',
-            'Demo',
-            'SDK',
-            'API',
-        ],
-        showActiveTooltip: true,
         scrollingSpeed: 1000,
         controlArrows: false,
         slidesNavigation: true,
