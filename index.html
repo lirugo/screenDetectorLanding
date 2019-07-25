@@ -20,17 +20,13 @@
     <div class="section s1">
         <div class="container">
             <div class="title-container">
-                <h1 id="main-title">Screen Defect</h1>
+                <h1>Screen Defect</h1>
             </div>
         </div>
     </div>
     <div class="section s2">
         <div class="slide">
-            <div class="container">
-                <div class="title-container">
-                    <h1>Demo</h1>
-                </div>
-            </div>
+            <h1>Demo</h1>
         </div>
         <div class="slide">
             <h1>Demo Slide</h1>
@@ -38,11 +34,7 @@
     </div>
     <div class="section s3">
         <div class="slide">
-            <div class="container">
-                <div class="title-container">
-                    <h1>SDK</h1>
-                </div>
-            </div>
+            <h1>SDK</h1>
         </div>
         <div class="slide">
             <h1>SDK Slide</h1>
@@ -50,11 +42,7 @@
     </div>
     <div class="section s4">
         <div class="slide">
-            <div class="container">
-                <div class="title-container">
-                    <h1>API</h1>
-                </div>
-            </div>
+            <h1>API</h1>
         </div>
         <div class="slide">
             <h1>API Slide</h1>
@@ -68,7 +56,7 @@
         document.body.classList.add("loaded");
     }, 1000);
     setTimeout(() => {
-        document.getElementById("main-title").classList.add("start-anim");
+        document.querySelector("h1").classList.add("start-anim");
     }, 1300);
 
     new fullpage('#fullpage', {
