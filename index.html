@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <title>Screen Detect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/loader.css" />
+    <link rel="stylesheet" type="text/css" href="css/btn.css" />
 </head>
 <body>
 
@@ -16,57 +22,102 @@
     <div class="loader-section section-right"></div>
 </div>
 
-<div id="fullpage">
-    <div class="section s1">
-        <div class="container">
-            <div class="title-container">
-                <h1>Screen Defect</h1>
-            </div>
-        </div>
-    </div>
-    <div class="section s2">
-        <div class="slide">
-            <div class="container">
-                <div class="title-container">
-                    <h1>Demo</h1>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <h1>Demo Slide</h1>
-        </div>
-    </div>
-    <div class="section s3">
-        <div class="slide">
-            <div class="container">
-                <div class="title-container">
-                    <h1>SDK</h1>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <h1>SDK Slide</h1>
-        </div>
-    </div>
-    <div class="section s4">
-        <div class="slide">
-            <div class="container">
-                <div class="title-container">
-                    <h1>API</h1>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <h1>API Slide</h1>
-        </div>
+<div id="app">
+    <div id="fullpage">
+        <v-app>
+            <v-content>
+                <v-container fluid pl-0 pr-0>
+                    <!--Welcome slide-->
+                    <div class="section s1">
+                        <div class="container">
+                            <div class="title-container">
+                                <h1>Screen Defect</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Demo slide-->
+                    <div class="section s2">
+                        <div class="slide">
+                            <v-layout align-center justify-center row fill-height wrap>
+                                <v-flex>
+                                    <h1>Download Demo!</h1>
+                                    <div class="app_btn_area mt-4">
+                                        <div class="app_btn">
+                                            <div class="media">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-server" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <a href="#"><h4>Available</h4></a>
+                                                        <p>from our server</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="app_btn">
+                                            <div class="media">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-github" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <a href="#"><h4>Available</h4></a>
+                                                        <p>from GitHub</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </v-flex>
+                            </v-layout>
+                        </div>
+                    </div>
+                    <div class="section s3">
+                        <div class="slide">
+                            <div class="container">
+                                <div class="title-container">
+                                    <h1>SDK</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <h1>SDK Slide</h1>
+                        </div>
+                    </div>
+                    <div class="section s4">
+                        <div class="slide">
+                            <div class="container">
+                                <div class="title-container">
+                                    <h1>API</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <h1>API Slide</h1>
+                        </div>
+                    </div>
+                </v-container>
+            </v-content>
+        </v-app>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+    })
+</script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
 <script>
     setTimeout(() => {
         document.body.classList.add("loaded");
-    }, 1000);
+    }, 100);
 
     new fullpage('#fullpage', {
         autoScrolling: true,
