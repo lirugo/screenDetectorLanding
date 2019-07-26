@@ -44,6 +44,10 @@ a:hover, a:focus {
   outline: none;
 }
 
+p {
+  color: #fff;
+}
+
 h1 {
   color: #fff;
   font-weight: 800;
