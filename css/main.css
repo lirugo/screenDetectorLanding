@@ -40,7 +40,7 @@ header nav ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -54,15 +54,9 @@ header nav ul a:hover {
   color: white;
 }
 
-.m-t-20 {
-  margin: 0;
-}
-
 .wrapper {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  grid-template-columns: auto;
 }
 
 .wrapper section {
