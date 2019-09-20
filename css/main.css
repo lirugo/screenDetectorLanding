@@ -21,6 +21,7 @@ header {
           justify-content: space-between;
   width: calc(100% - 2em);
   background: white;
+  text-transform: uppercase;
 }
 
 header a {
@@ -49,6 +50,14 @@ header nav ul li a {
   padding: 1em;
 }
 
+header nav ul a:hover {
+  color: white;
+}
+
+.m-t-20 {
+  margin: 0;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
@@ -73,19 +82,37 @@ header nav ul li a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  padding-left: 1.4em;
   background: url("../img/arrow.svg") no-repeat;
   background-size: 16px;
   background-position: 0 1px;
-  padding-left: 1.4em;
+}
+
+.wrapper section .btn-download {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.wrapper section .icon-apk {
+  background: url("../img/android.png") no-repeat;
+  background-size: 40px;
+  background-position: 0 1px;
+}
+
+.wrapper section .icon-sdk {
+  background: url("../img/sdk.svg") no-repeat;
+  background-size: 40px;
+  background-position: 0 1px;
 }
 
 .wrapper section .primary {
-  padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+  padding: 1.5em 1.5em 1.5em calc(3em + 50px);
   background-position: 3em;
   border: 1px solid gray;
   border-width: 1px 1px 1px 0;
   display: inline-block;
-  margin-top: 3em;
+  margin-top: 1em;
   margin-left: -3em;
 }
 
@@ -100,12 +127,17 @@ header nav ul li a {
 }
 
 .wrapper section.hero p {
+  width: 70%;
   font-size: 1.2rem;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 .wrapper section.hero h1 {
   font-size: 3rem;
+}
+
+.wrapper section.hero a:hover {
+  color: gray;
 }
 
 .wrapper section.sidebar, .wrapper section.subscribe {
@@ -117,10 +149,14 @@ header nav ul li a {
   background-color: #FFCC00;
 }
 
+.wrapper section.sidebar a:hover {
+  color: white;
+}
+
 .wrapper section.sidebar .read-btn {
   margin-top: 2em;
   display: block;
-  background-position: 0 .2em;
+  background-position: 0 .3em;
 }
 
 .wrapper section.subscibe input {
@@ -140,6 +176,18 @@ header nav ul li a {
   cursor: pointer;
 }
 
+.wrapper section.subscibe .btn-subscribe {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+@media only screen and (max-width: 1020px) {
+  section.hero p {
+    width: 100% !important;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   html {
     font-size: 18px;
@@ -153,8 +201,8 @@ header nav ul li a {
   .wrapper {
     -ms-grid-columns: 70% auto;
         grid-template-columns: 70% auto;
-    -ms-grid-rows: 60% auto;
-        grid-template-rows: 60% auto;
+    -ms-grid-rows: 40% auto;
+        grid-template-rows: 40% auto;
         grid-template-areas: "hero featured" "hero subscribe";
     height: 100vh;
   }
