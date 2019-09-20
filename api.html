@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Screen Detector - API</title>
+
+    <link rel="stylesheet" href="css/api.css">
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">Smart Alliance</a>
+        <nav>
+            <ul>
+                <li><a href="#">API</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section>
+            <div class="inner">
+                <div class="api">
+                    <h1>Common information</h1>
+                    <div class="common">
+                        <p>URL: sc.smartalliance.eu</p>
+                        <p>Schema: HTTP</p>
+                        <p>Version: 0.0.1</p>
+                    </div>
+                    
+                </div>
+                <div class="api">
+                    <h1>Get requests in period between two date</h1>
+                    <div>
+                        <div>
+                            <h3>Type</h3>
+                            <span class="p-l-3">GET</span>
+                            <h3>PATH</h3>
+                            <span class="p-l-3">/api/{apiKey}/scans?startDate=DD-MM-YYYY&endDate=DD-MM-YYYY</span>
+                        </div>
+                        <div class="parameters">
+                            <h3>Parameters</h3>
+                            <ul>
+                                <li>
+                                    Api key <span class="red-text"><small>*required</small></span>
+                                </li>
+                                <li>
+                                    Start date <span class="red-text"><small>*required</small></span>
+                                </li>
+                                <li>
+                                    End date <span class="red-text"><small>*required</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="response">
+                            <h3>Response</h3>
+                            <div class="p-l-3">
+                                <p>Code: 200</p>
+                                
+<code>[
+    {
+        "id": 1001,
+        "datetime": "19-07-2019 08:11",
+        "model": "SM-A505FN",
+        "brand": "samsung",
+        "serial": "R58M57TNSXT",
+        "screen_width": 1440,
+        "screen_height": 1920,
+        "fingerprint": "HONOR/JAT-L21/HWJAT-M:9/HONORJAT-LX1/136C461R1:user/release-keys",
+        "hardware": "mt6765",
+        "display": "JAT-L21 9.0.1.136(C461E2R1P8)",
+        "ip_addr": "192.168.1.234",
+        "image_name": "431.jpg",
+        "result": 1
+    }
+]</code>                       
+                                <p>Code: 404</p>
+<code>404 - Not Found</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api">
+                        <h1>Get short information about request</h1>
+                        <div>
+                            <div>
+                                <h3>Type</h3>
+                                <span class="p-l-3">GET</span>
+                                <h3>PATH</h3>
+                                <span class="p-l-3">/api/{apiKey}/scans/{requestId}/short</span>
+                            </div>
+                            <div class="parameters">
+                                <h3>Parameters</h3>
+                                <ul>
+                                    <li>
+                                        Api key <span class="red-text"><small>*required</small></span>
+                                    </li>
+                                    <li>
+                                        Request ID <span class="red-text"><small>*required</small></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="response">
+                                <h3>Response</h3>
+                                <div class="p-l-3">
+                                    <p>Code: 200</p>
+                                    
+<code>{
+    "id": 1001,
+    "datetime": "19-07-2019 08:11",
+    "model": "SM-A505FN",
+    "brand": "samsung",
+    "serial": "R58M57TNSXT",
+    "result": 1,
+    "image_name": "R58M57TNSXT"
+}</code>                       
+                                    <p>Code: 404</p>
+                                    <code>404 - Not Found</code>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="api">
+                    <h1>Get full information about request</h1>
+                    <div>
+                        <div>
+                            <h3>Type</h3>
+                            <span class="p-l-3">GET</span>
+                            <h3>PATH</h3>
+                            <span class="p-l-3">/api/{apiKey}/scans/{requestId}/full</span>
+                        </div>
+                        <div class="parameters">
+                            <h3>Parameters</h3>
+                            <ul>
+                                <li>
+                                    Api key <span class="red-text"><small>*required</small></span>
+                                </li>
+                                <li>
+                                    Request ID <span class="red-text"><small>*required</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="response">
+                            <h3>Response</h3>
+                            <div class="p-l-3">
+                                <p>Code: 200</p>
+                                
+<code>{
+    "id": 1001,
+    "datetime": "19-07-2019 08:11",
+    "model": "SM-A505FN",
+    "brand": "samsung",
+    "serial": "R58M57TNSXT",
+    "screen_width": 1440,
+    "screen_height": 1920,
+    "fingerprint": "HONOR/JAT-L21/HWJAT-M:9/HONORJAT-LX1/136C461R1:user/release-keys",
+    "hardware": "mt6765",
+    "display": "JAT-L21 9.0.1.136(C461E2R1P8)",
+    "ip_addr": "192.168.1.234",
+    "image_name": "431.jpg",
+    "result": 1
+}</code>                       
+                                <p>Code: 404</p>
+                                <code>404 - Not Found</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="api">
+                    <h1>Get full information about request</h1>
+                    <div>
+                        <div>
+                            <h3>Type</h3>
+                            <span class="p-l-3">GET</span>
+                            <h3>PATH</h3>
+                            <span class="p-l-3">/api/{apiKey}/scans/{requestId}/image</span>
+                        </div>
+                        <div class="parameters">
+                            <h3>Parameters</h3>
+                            <ul>
+                                <li>
+                                    Api key <span class="red-text"><small>*required</small></span>
+                                </li>
+                                <li>
+                                    Request ID <span class="red-text"><small>*required</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="response">
+                            <h3>Response</h3>
+                            <div class="p-l-3">
+                                <p>Code: 200</p>
+                                
+<code>{
+    "name": "431.jpg",
+    "image": "/9j/4AAQSkZJRgABAQEASABIAAD/2wBD..."
+}</code>                       
+                                <p>Code: 404</p>
+                                <code>404 - Not Found</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script>
+        var tl = new TimelineMax();
+
+        tl.staggerFrom('section', 2, {
+            opacity: 0,
+            ease: Power2.easeInOut,
+        }, 0.2)
+    </script>
+</body>
+</html>
