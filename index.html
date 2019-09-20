@@ -2,148 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Screen Detect</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Screen Detector</title>
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/loader.css" />
-    <link rel="stylesheet" type="text/css" href="css/btn.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-</div>
+    <header>
+        <a href="#" class="logo">Smart Alliance</a>
+        <nav>
+            <ul>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Demo</a></li>
+                <li><a href="#">Docs</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div id="app">
-    <div id="fullpage">
-        <v-app>
-            <v-content>
-                <v-container fluid pl-0 pr-0>
-                    <!--Welcome slide-->
-                    <div class="section s1">
-                        <v-layout align-center justify-center row fill-height>
-                            <v-flex>
-                                <h1>Smart Alliance</h1>
-                                <h1>SCREEN DETECTOR</h1>
-                            </v-flex>
-                        </v-layout>
+    <div class="wrapper">
+            <section class="hero">
+                <div class="inner">
+                    <div class="clipper">
+                        <h1>Screen Detector</h1>
                     </div>
 
-                    <!--Demo slide-->
-                    <div class="section s2">
-                        <div class="slide">
-                            <v-layout align-center justify-center row fill-height wrap>
-                                <v-flex>
-                                    <h1>Download Demo!</h1>
-                                    <div class="app_btn_area mt-4">
-                                        <div class="app_btn">
-                                            <div class="media">
-                                                <div class="d-flex">
-                                                    <div class="d-flex">
-                                                        <i class="fa fa-server" aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <a href="#"><h4>Available</h4></a>
-                                                        <p>from our server</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="app_btn">
-                                            <div class="media">
-                                                <div class="d-flex">
-                                                    <div class="d-flex">
-                                                        <i class="fa fa-github" aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <a href="#"><h4>Available</h4></a>
-                                                        <p>from GitHub</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </v-flex>
-                                <v-flex>
-                                    <img class="img-fluid mt-5" src="img/right-mobile.png" alt="">
-                                </v-flex>
+                    <div class="anim-panel">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, similique!</p>
+                        <a href="#" class="read-btn primary">Download</a>
+                    </div>
+                </div>
+            </section>
 
-                            </v-layout>
-                        </div>
+            <section class="sidebar">
+                <div class="inner">
+                    <div class="clipper">
+                        <h2>About</h2>
                     </div>
-                    <div class="section s3">
-                        <div class="slide">
-                            <v-layout align-center justify-center row fill-height>
-                                <v-flex>
-                                    <div class="main_title">
-                                        <h1>SDK</h1>
-                                        <p>
-                                            SA SCREEN DETECTOR SDK v1.0 для Android поставляется в виде дистрибутива проекта библиотеки Android. Он написан на Java и C и доступен для Android 5.1 и более поздних версий.
-                                            Библиотека позволяет добавить в любое андроид-приложение логику по захвату отраженного (в зеркале) изображения экрана с последующим анализом экрана на дефекты. Первичный захват и первичный анализ происходит непосредственно на смартфоне, окончательный анализ и поиск результата происходят на сервере.
-                                        </p>
-                                    </div>
-                                </v-flex>
-                            </v-layout>
-                        </div>
-                        <div class="slide">
-                            <h1>SDK Slide</h1>
-                        </div>
+
+                    <div class="anim-panel">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse unde, blanditiis, sapiente debitis excepturi odit veritatis earum voluptates hic nisi, temporibus laboriosam mollitia accusamus. Voluptatum ab ipsum dolor est eaque, enim laudantium architecto exercitationem tenetur, eum, sit perferendis accusantium numquam?</p>
+                        <a href="#" class="read-btn">Read more</a>
                     </div>
-                    <div class="section s4">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="title-container">
-                                    <h1>API</h1>
-                                </div>
+                </div>
+            </section>
+
+            <section class="subscibe">
+                    <div class="inner">
+                            <div class="clipper">
+                                <h2>Subscribe</h2>
+                            </div>
+        
+                            <div class="anim-panel">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, non.</p>
+                                <input type="text" name="email" placeholder="Email"/>
+                                <button class="cta">Subscribe</button>
                             </div>
                         </div>
-                        <div class="slide">
-                            <h1>API Slide</h1>
-                        </div>
-                    </div>
-                </v-container>
-            </v-content>
-        </v-app>
+            </section>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-<script>
-    new Vue({
-        el: '#app',
-        vuetify: new Vuetify(),
-    })
-</script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
-<script>
-    setTimeout(() => {
-        document.body.classList.add("loaded");
-    }, 100);
-
-    new fullpage('#fullpage', {
-        autoScrolling: true,
-        navigation: true,
-        anchors: [
-            's1',
-            's2',
-            's3',
-            's4',
-        ],
-        scrollingSpeed: 1000,
-        controlArrows: false,
-        slidesNavigation: true,
-    });
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="/js/mian.js"></script>
 </body>
 </html>

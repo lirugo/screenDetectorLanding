@@ -1,119 +1,177 @@
-@-webkit-keyframes background {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-}
+$primary-color: #FFCC00;
+$submit-btn-bg-color: black;
+$submit-btn-color: white;
 
-@-moz-keyframes background {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap');
 
-@keyframes background {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
+body, html {
+    margin: 0;
 }
 
 body {
-  font-family: 'Open-Sans', sans-serif;
+    height: 100%;
+    font-family: 'Montserrat';
+    display: none;
 }
 
-a{
-  text-decoration:none;
-  transition: all 0.3s ease-in-out;
-  &:hover, &:focus{
-    text-decoration:none;
-    outline: none;
-  }
+header {
+    position: absolute;
+    padding: 1em;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2em);
+    background: white;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a.logo {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        li a {
+            padding: 1em;
+        }
+    }
 }
 
-p {
-  color: #fff;
+.wrapper {
+    display: grid;
+    grid-template-columns: auto;
+
+    section {
+        padding: 3em;
+
+        h1, h2, .read-btn {
+            text-transform: uppercase;
+            margin: 0;
+        }  
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        .read-btn {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            background: url('../img/arrow.svg') no-repeat;
+            background-size: 16px;
+            background-position: 0 1px;
+            padding-left: 1.4em;
+        }
+
+        .primary {
+            padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+            background-position: 3em;
+            border: 1px solid gray;
+            border-width: 1px 1px 1px 0;
+            display: inline-block;
+            margin-top: 3em;
+            margin-left: -3em;
+        }
+
+        .clipper {
+            overflow: hidden;
+        }
+    }
+
+    section.hero {
+        padding-top: 8em;
+        background: url('../img/background.jpg');
+        background-size: cover;
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    section.sidebar, section.subscribe {
+        font-size: .9rem;
+        line-height: 1.6em;
+    }
+
+    section.sidebar {
+        background-color: $primary-color;
+
+        .read-btn {
+            margin-top: 2em;
+            display: block;
+            background-position: 0 .2em;
+        }
+    }
+
+    section.subscibe {
+        input {
+            width: calc(100% - 2em);
+            padding: calc(1em - 2px);
+            font-family: 'Montserrat';
+            margin-bottom: 1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 1em;
+            background: $submit-btn-bg-color;
+            color: $submit-btn-color;
+            border: none;
+            font-family: 'Montserrat';
+            cursor: pointer;
+        }
+    }
 }
 
-h1 {
-  color: #fff;
-  font-weight: 800;
-  font-size: 4em;
-  letter-spacing: -2px;
-  text-align: center;
-  text-shadow: 0px 1px 1px rgba(255,255,255,1);
-  margin: 0;
-  line-height: 1;
-  transform: translateY(6rem);
-  z-index: 1;
-  animation: up 500ms linear forwards;
+@media only screen and (min-width: 768px){
+    html {
+        font-size: 18px;
+    }
 }
 
-.title-container {
-  font-size: 0;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 0.4rem;
+
+@media only screen and (min-width: 1020px){
+    header {
+        background: none;
+    }
+
+    .wrapper {
+        grid-template-columns: 70% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: 
+            "hero featured"
+            "hero subscribe";
+        height: 100vh;
+    }
+
+    section.hero {
+        grid-area: hero;
+    }
+
+    section {
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
+    }
 }
 
-@keyframes up {
-
-  100% {
-    transform: translateY(0);
-  }
-
+@media only screen and (min-width: 1800px){
+    html {
+        font-size: 21px;
+    }
 }
-
-@keyframes draw {
-
-  100% {
-    width: 100%;
-  }
-
-}
-
-span {
-  background: white !important;
-}
-
-.s1 {
-  background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
-  background-size: 300% 300%;
-  -webkit-animation: background 50s ease infinite;
-  -moz-animation: background 50s ease infinite;
-  animation: background 50s ease infinite;
-}
-
-.fp-slidesNav.fp-bottom {
-  left: auto !important;
-  margin-right: 1em !important;
-}
-
-.s2 {
-  background-color: burlywood;
-}
-
-.s3 {
-  background-color: salmon;
-}
-
-.s4 {
-  background-color: royalblue;
-}
-
